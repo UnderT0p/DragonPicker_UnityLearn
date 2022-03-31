@@ -6,7 +6,7 @@ using TMPro;
 
 public class EnergyShield : MonoBehaviour
 {
-    [SerializeField]private float sensitivity;
+    
     private Vector3 healthBasketMax = new Vector3(150, 150, 150);
     private Vector3 healthBasketMidl = new Vector3(100, 100, 100);
     private Vector3 healthBasketMin = new Vector3(50, 50, 50);
@@ -37,7 +37,7 @@ public class EnergyShield : MonoBehaviour
             {
                 if (!(Input.GetAxis("Mouse X") < 0))
                 {
-                    transform.position += new Vector3(-(Input.GetAxis("Mouse X") * sensitivity), 0f, 0f);
+                    transform.position += new Vector3(-(Input.GetAxis("Mouse X") * ScharedData.Sensitivity), 0f, 0f);
                 }
 
             }
@@ -45,12 +45,12 @@ public class EnergyShield : MonoBehaviour
             {
                 if (!(Input.GetAxis("Mouse X") > 0))
                 {
-                    transform.position += new Vector3(-(Input.GetAxis("Mouse X") * sensitivity), 0f, 0f);
+                    transform.position += new Vector3(-(Input.GetAxis("Mouse X") * ScharedData.Sensitivity), 0f, 0f);
                 }
             }
             else
             {
-                transform.position += new Vector3(-(Input.GetAxis("Mouse X") * sensitivity), 0f, 0f);
+                transform.position += new Vector3(-(Input.GetAxis("Mouse X") * ScharedData.Sensitivity), 0f, 0f);
             }
         }
         

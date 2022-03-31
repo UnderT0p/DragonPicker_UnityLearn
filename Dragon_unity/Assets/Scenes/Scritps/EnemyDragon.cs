@@ -60,14 +60,7 @@ public class EnemyDragon : MonoBehaviour, IEnemy
         {
             if (!(ScharedData.Health<3f))
             {
-                if (Random.Range(0f, 5f) >= 4)
-                {
-                    TeleportItemToDragon(dragonGreenEgg);
-                }
-                else
-                {
-                    TeleportItemToDragon(dragonEgg);
-                }
+                EggSelection();
             }
             else
             {
@@ -75,13 +68,9 @@ public class EnemyDragon : MonoBehaviour, IEnemy
                 {
                     TeleportItemToDragon(miniBasket);
                 }
-                else if (Random.Range(0f, 5f) >= 3)
-                {
-                    TeleportItemToDragon(dragonGreenEgg);
-                }
                 else
                 {
-                    TeleportItemToDragon(dragonEgg);
+                    EggSelection();
                 }
             }
             
@@ -143,5 +132,16 @@ public class EnemyDragon : MonoBehaviour, IEnemy
                 break;
         }
         
+    }
+    private void EggSelection()
+    {
+        if (Random.Range(0f, 5f) >= 3)
+        {
+            TeleportItemToDragon(dragonGreenEgg);
+        }
+        else
+        {
+            TeleportItemToDragon(dragonEgg);
+        }
     }
 }

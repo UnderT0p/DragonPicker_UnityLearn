@@ -20,7 +20,7 @@ public class AudioSorseMainCamera : MonoBehaviour
     }
     private void ChangeVolumeMainCameraAudioSorse()
     {
-        gameObject.GetComponent<AudioSource>().volume = ScharedData.Volume;
+        gameObject.GetComponent<AudioSource>().volume = ScharedData.VolumeMusic;
     }
     void Update()
     {

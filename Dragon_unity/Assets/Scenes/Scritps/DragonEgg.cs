@@ -80,7 +80,7 @@ public class DragonEgg : MonoBehaviour,IDropItem
     public void PlaySound(AudioClip audioClip)
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.volume = ScharedData.Volume;
+        audioSource.volume = ScharedData.VolumeEffects;
         audioSource.clip = audioClip;
         audioSource.Play();
     }

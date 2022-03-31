@@ -38,14 +38,27 @@ public static class ScharedData
         set { health = value; }
     }
 
-    private static float volume=1;
+    private static float volumeEffects=1f;
 
-    public static float Volume
+    public static float VolumeEffects
     {
-        get { return volume; }
-        set { volume = value; }
+        get { return volumeEffects; }
+        set { volumeEffects = value; }
     }
+    private static float volumeMusic = 0.5f;
 
+    public static float VolumeMusic
+    {
+        get { return volumeMusic; }
+        set { volumeMusic = value; }
+    }
+    private static float sensitivity = 1f;
+
+    public static float Sensitivity
+    {
+        get { return sensitivity; }
+        set { sensitivity = value; }
+    }
 
 
 
